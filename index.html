@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar1</title>
+    <link rel="stylesheet" href="/theme.css">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+
+<body class="light-mode">
+    <header class="navbar">
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="navbar-toggle" onclick="toggleDarkMode()">
+            <div class="navbar-toggle-slider"></div>
+        </div>
+    </header>
+    <section class="maincontainer">
+        <aside class="sidebar">
+            <ul class="ul">
+                <li><a href="/certificate/certi.html">Certificate</a></li>
+                <li><a href="/project/projectls.html">Projects Completed Personally</a></li>
+                <li><a href="/acaproject/acaproject.html">Academic Projects</a></li>
+            </ul>
+            <ul class="social-icons">
+                <li class="github-container">
+                    <a href="#" class="hover-github" onmouseover="showGitID()" onmouseout="hideGitId()"><img
+                            class="imgic img-git" src="/icon/github.svg" alt="GitHub">
+                        <span id="github-id">github.com</span>
+                    </a>
+                </li>
+
+                
+                <li class="email-container">
+                    <a href="#" class="hover-Email" onmouseover="showEmail()"
+                        onmouseout="hideEmail()">
+                        <img class="imgic img-email" src="/icon/email.svg" alt="WhatsApp">
+                        <span id="emaill">abc@email.com</span>
+                    </a>
+                </li>
+                <li class="insta-container">
+                    <a href="#" class="hover-insta" onmouseover="showInstaID()"
+                        onmouseout="hideInstaId()"><img class="imgic img-inst" src="/icon/instagram.svg"
+                        alt="Instagram">
+                        <span id="insta-id">instaid</span>
+                    </a>
+                </li>
+                <li class="linkdin-container">
+                    <a href="#" class="hover-linkdin" onmouseover="showLinkdin()" onmouseout="hideLinkdin()">
+                        <img class="imgic img-link" src="/icon/linkedin.svg" alt="LinkedIn">
+                        <span id="linkdin-id">linkedin</span>
+                    </a>
+                </li>
+                <li class="whatsapp-container">
+                    <a href="#" class="hover-whatsapp" onmouseover="showWhatsAppNumber()"
+                        onmouseout="hideWhatsAppNumber()">
+                        <img class="imgic img-what" src="/icon/whatsapp.svg" alt="WhatsApp">
+                        <span id="whatsapp-number">+91 1234567890</span>
+                    </a>
+                </li>
+            </ul>
+
+        </aside>
+
+        <article class="content">
+            <article class="content">
+                <div class="profile-container">
+                    <img src="prof.jpg" alt="Profile Image" class="profile-image">
+                    <div class="profile-info">
+                        <h2 class="aboutmeh">Your Name</h2>
+                        <p class="aboutme">Passionate IT engineer with a love for web design, Python programming, and continuous learning. Committed to delivering impactful online experiences through intuitive designs and clean code. </p>
+                    </div>
+                </div>
+            </article>
+        </article>
+    </section>
+    <footer class="footer">
+        <p id="footerText">I am a software developer</p>
+    </footer>
+    
+    <script src="footerscript.js"></script>
+    <script src="sidescript.js"></script>
+    <script src="/theme.js"></script>
+</body>
+
+</html>

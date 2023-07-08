@@ -1,0 +1,39 @@
+
+#certificateTable {
+    margin-top: 70px; /* Adjust the margin to push the table below the fixed navbar */
+    width: 100%;
+  }
+  #certificateTable th, #certificateTable td {
+    text-align: left;
+    padding: 8px;
+  }
+  #certificateTable th {
+    background-color: #f2f2f2;
+  }
+  #certificateTable tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  .certificateLink {
+    text-decoration: none;
+    color: blue;
+  }
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  a.certificateLink {
+    text-decoration: none;
+    list-style-type: none;
+  }
+  
+  a.certificateLink:hover {
+    list-style-type: none;
+  }
+  

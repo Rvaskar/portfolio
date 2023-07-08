@@ -1,0 +1,398 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #363636;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: Arial, sans-serif;
+}
+
+.dark-mode {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: borderEffect 4s infinite linear;
+  z-index: 1;
+  color: #f4f4f4;
+}
+
+@keyframes borderEffect {
+  0% {
+    box-shadow: 0 2px 5px rgba(215, 215, 215, 0.967);
+  }
+
+  25% {
+    box-shadow: 0 2px 5px rgba(255, 0, 0, 0.666);
+  }
+
+  50% {
+    box-shadow: 0 2px 5px rgba(66, 66, 255, 0.671);
+  }
+
+  75% {
+    box-shadow: 0 2px 5px rgba(124, 254, 25, 0.529);
+  }
+
+  100% {
+    box-shadow: 0 2px 5px rgba(215, 215, 215, 0.94);
+  }
+}
+.navbar.light-mode li a {
+  text-decoration: none;
+  color: #363636; /* Change this to your desired text color for light mode */
+}
+
+.navbar.dark-mode li a {
+  text-decoration: none !important;
+  color: #ffffff !important; /* Change this to your desired text color for dark mode */
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  /* color: #333;  Change this to your desired text color */
+}
+.maincontainer {
+  position: relative;
+  margin-top: 50px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 250px;
+  height: calc(100vh - 100px);
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+  transition: width 0.3s ease-in-out;
+  
+}
+.sidebar.light-mode li a {
+  text-decoration: none;
+  color: #363636; /* Change this to your desired text color for light mode */
+}
+
+section.dark-mode{
+  text-decoration: none;
+  color: #ffffff; /* Change this to your desired text color for dark mode */
+}
+section.light-mode{
+  text-decoration: none;
+  color: #363636; /* Change this to your desired text color for light mode */
+}
+
+.sidebar.dark-mode li a {
+  text-decoration: none;
+  color: #ffffff; /* Change this to your desired text color for dark mode */
+}
+.sidebar ul {
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar ul li {
+  padding: 10px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+}
+.navbar li a,
+.sidebar .ul a {
+  text-decoration: none;
+  color: #000000;
+  padding: 4px;
+  box-shadow: 0 2px 5px rgba(211, 209, 209, 0.904);
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.navbar.dark-mode li a,
+.sidebar.dark-mode li a {
+  color: #ffffff; /* Change this to your desired text color for dark mode */
+}
+.content {
+  margin-left: 60px; /* Adjust this value to match sidebar width */
+  padding: 20px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 30px;
+  width: 100%;
+  background-color: none;
+  /* color: #363636; */
+  padding: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer.dark-mode {
+  color: #ffffff;
+}
+.footer #footerText {
+  animation: textChange 3s infinite;
+}
+
+@keyframes textChange {
+  0%,
+  100% {
+    content: " software developer";
+  }
+  25% {
+    content: " IT Engineer";
+  }
+  50% {
+    content: " Web Developer";
+  }
+  75% {
+    content: "  Designer";
+  }
+}
+
+.profile-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 50px;
+  flex-direction: row-reverse;
+}
+
+.profile-image {
+  min-width: 200px;
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 5%;
+  box-shadow: 0 2px 5px rgba(155, 150, 150, 0.2);
+  transform: scaleX(-1);
+  
+}
+
+.profile-info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.social-icons {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  flex-direction: column;
+}
+.social-icons.dark-mode {
+  filter: drop-shadow(0 0 5px #f7f0f0);
+  box-shadow: 0 2px 5px rgb(254, 254, 254);
+}
+.social-icons li {
+  margin-right: 10px;
+}
+
+.social-icons li a img {
+  filter: drop-shadow(0 0 5px #f7f0f0);
+  box-shadow: 0 2px 5px rgb(255, 243, 243);
+  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+  transition: color 0.3s;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.social-icons li a:hover .img-what {
+  fill: #69fc00;
+  filter: drop-shadow(0 0 5px #69fc00);
+  box-shadow: 0 2px 5px rgb(63, 248, 7);
+}
+
+.social-icons li a:hover .img-inst {
+  filter: drop-shadow(0 0 5px #ff0000);
+  box-shadow: 0 2px 5px rgb(7, 87, 248);
+  fill: darkviolet;
+}
+.social-icons li a:hover .img-email {
+  filter: drop-shadow(0 0 5px #ff0000);
+  box-shadow: 0 2px 5px rgb(239, 240, 241);
+  fill: darkviolet;
+}
+
+.social-icons li a:hover .img-link {
+  filter: drop-shadow(0 0 5px #0015fc);
+  box-shadow: 0 2px 5px rgb(56, 2, 250);
+}
+
+.social-icons li a:hover .img-git {
+  filter: drop-shadow(0 0 5px #f7f0f0);
+  box-shadow: 0 2px 5px rgb(23, 23, 23);
+}
+
+.whatsapp-container {
+  position: relative;
+}
+
+#whatsapp-number {
+  display: none; /* Hide the WhatsApp number by default */
+  background-color: #00f608;
+  color: rgb(0, 0, 0);
+  padding: 5px 10px;
+
+  border-radius: 5px;
+  position: absolute;
+  top: 100%;
+  left: 40%;
+  transform: translateX(-50%);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0 2px 5px rgb(7, 87, 248);
+}
+
+.github-container {
+  position: relative;
+}
+
+#github-id {
+  display: none; /* Hide the GitHub ID by default */
+  background-color: #000000;
+  color: rgb(228, 228, 228);
+  padding: 5px 10px;
+  
+  border-radius: 5px;
+  position: absolute;
+  top: 90%;
+  left: 35%;
+  transform: translateX(-50%);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0 2px 5px rgb(29, 30, 32);
+}
+
+.linkdin-container {
+  position: relative;
+}
+
+#linkdin-id {
+  display: none; /* Hide the LinkedIn ID by default */
+  background-color: #2228d9;
+  color: rgb(228, 228, 228);
+  padding: 5px 10px;
+  margin-left: 75px;
+  border-radius: 5px;
+  position: absolute;
+  transform: translateX(-50%);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0 2px 5px rgb(66, 39, 239);
+}
+.hover-Email {
+  position: relative;
+}
+
+#emaill {
+  display: none; /* Hide the LinkedIn ID by default */
+  background-color: #ff0202;
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: absolute;
+  margin-left: 85px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0 2px 5px rgb(250, 44, 44);
+}
+.hover-insta {
+  position: relative;
+}
+
+#insta-id {
+  display: none; /* Hide the LinkedIn ID by default */
+  background-color: #ff0202;
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: absolute;
+  margin-left: 55px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0 2px 5px rgb(250, 44, 44);
+}
+.aboutme{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.aboutme:hover{
+  filter: drop-shadow(0 0 5px #f0f3f4);
+  box-shadow: 0 2px 5px rgb(110, 110, 110);
+}
+.aboutmeh{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.aboutmeh:hover{
+  filter: drop-shadow(0 0 5px #ffffff);
+  box-shadow: 0 2px 5px rgb(136, 136, 136);
+}

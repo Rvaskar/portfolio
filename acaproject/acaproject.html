@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <!-- <link rel="stylesheet" href="/theme.css"> -->
+    <title>Project List</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 70px;
+            /* Adjust the margin to push the table below the fixed navbar */
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .gitlogo {
+            height: 20px;
+        }
+
+        td a {
+            text-decoration: none;
+        }
+
+        .gitlogo:hover {
+            padding: 2px;
+            border-radius: 20px;
+            filter: drop-shadow(0 0 5px #f7f0f0);
+            box-shadow: 0 2px 5px rgb(114, 113, 113);
+            box-shadow: 0 2px 5px rgb(119, 119, 119);
+        }
+    </style>
+</head>
+
+<body class="light-mode">
+    <header class="navbar">
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="navbar-toggle" onclick="toggleDarkMode()">
+            <div class="navbar-toggle-slider"></div>
+        </div>
+    </header>
+    <table>
+        <tr>
+            <th>Sr. Number</th>
+            <th>Project Name</th>
+            <th>Year</th>
+            <th>Technology</th>
+            <th>GitHub Link</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><a href="project1.html">Project 1</a></td>
+            <td>2022</td>
+            <td>Some information about Project 1</td>
+            <td><a href="https://github.com/project1"><img class="gitlogo" src="/icon/github.svg" alt="GitHub Link"></a>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><a href="project2.html">Project 2</a></td>
+            <td>2023</td>
+            <td>Some information about Project 2</td>
+            <td><a href="https://github.com/project2"><img class="gitlogo" src="/icon/github.svg" alt="GitHub Link"></a>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><a href="project2.html">Project 3</a></td>
+            <td>2023</td>
+            <td>Some information about Project 3</td>
+            <td><a href="https://github.com/project2"><img class="gitlogo" src="/icon/github.svg" alt="GitHub Link"></a>
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><a href="project2.html">Project 4</a></td>
+            <td>2023</td>
+            <td>Some information about Project 4</td>
+            <td><a href="https://github.com/project2"><img class="gitlogo" src="/icon/github.svg" alt="GitHub Link"></a>
+            </td>
+        </tr>
+        <!-- Add more rows for additional projects -->
+    </table>
+
+    <script>
+        // This script is not necessary for the basic functionality mentioned in the question.
+        // It's only required if you want to redirect to project pages and GitHub links.
+
+        // Redirect to project page on project name click
+        let projectLinks = document.querySelectorAll('a[href$=".html"]');
+        projectLinks.forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                let projectPage = link.getAttribute('href');
+                window.location.href = projectPage;
+            });
+        });
+
+        // Redirect to GitHub on GitHub link click
+        let githubLinks = document.querySelectorAll('a[href^="https://github.com"]');
+        githubLinks.forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                let githubURL = link.getAttribute('href');
+                window.open(githubURL);
+            });
+        });
+    </script>
+    <script src="/theme.js"></script>
+</body>
+
+</html>
